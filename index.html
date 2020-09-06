@@ -1,0 +1,23 @@
+<html>
+<head>
+    <link rel="stylesheet" href="main.css">
+    <!-- Load the latest version of TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+    <script src="table.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+<h1>Photo Auto Categorization Using Trained Machine Learning Model</h1>
+<div class="container">
+    <!-- the image can be changed to any dogt image on the internet -->
+    <img class="image" id="img" onmouseover="prediction(this)" crossorigin src="http://foodanddrink.scotsman.com/wp-content/uploads/2017/06/chihuahua-2137819_1280.jpg"/>
+    <img class="overlay" id="spinner" src="bot.gif"></img>
+</div>
+<hr>
+<div>Hover mouse over the photo, I'll tell you the categories</div>
+<table></table>
+</body>
+</html>
+
+<!-- Author: Brian Zou -->

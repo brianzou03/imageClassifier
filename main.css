@@ -1,0 +1,47 @@
+body {
+    background-color: white;
+}
+
+.image {
+ width: 512;
+ height: 512;
+}
+
+th {
+    border: 1px solid black;
+    background-color: lightblue;
+}
+
+td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 100%;
+    text-align: left;
+    display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 300;
+  left: 200;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  width: 100%;
+  transition: 2s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  width: 128;
+  height: 128;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+<!-- Author: Brian Zou -->
