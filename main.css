@@ -6,7 +6,9 @@ body {
  width: 512;
  height: 512;
 }
-
+input {
+ width: 1024;
+}
 th {
     border: 1px solid black;
     background-color: lightblue;

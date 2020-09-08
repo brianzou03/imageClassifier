@@ -7,16 +7,21 @@
     <script src="table.js"></script>
     <script src="index.js"></script>
 </head>
-<body>
-<h1>Photo Auto Categorization Using Trained Machine Learning Model</h1>
-<div class="container">
-    <!-- the image can be changed to any dogt image on the internet -->
-    <img class="image" id="img" onmouseover="prediction(this)" crossorigin src="http://foodanddrink.scotsman.com/wp-content/uploads/2017/06/chihuahua-2137819_1280.jpg"/>
-    <img class="overlay" id="spinner" src="bot.gif"></img>
-</div>
-<hr>
-<div>Hover mouse over the photo, I'll tell you the categories</div>
-<table></table>
+<body onload="onload()">
+    <h1>Photo Auto Categorization Using Trained Machine Learning Model</h1>
+    <div class="container">
+        <!-- the image can be changed to any dogt image on the internet -->
+        <img class="image" id="img" onmouseover="prediction(this)" crossorigin src="http://1.bp.blogspot.com/_3gQDLaB2ZsU/TNqPpOrfprI/AAAAAAAACLg/Wwg7s80k63U/s1600/siberian-husky-3.jpg">
+        <img class="overlay" id="spinner" src="bot.gif"></img>
+    </div>
+    <label for="url">Image URL</label>
+    <input type="text" id="url" name="url" required minlength="10" value="http://2.bp.blogspot.com/-GJ_XPPZMvN0/Te6u4m2npGI/AAAAAAAAAdk/XfzlIoESlQo/s1600/_MG_3123.JPG">
+    <button type="button" onclick="changeImage()">Try ME!</button>
+    <div id="error"></div>
+
+    <hr>
+    <div>Hover mouse over the photo, I'll tell you the categories</div>
+    <table></table>
 </body>
 </html>
 

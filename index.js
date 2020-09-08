@@ -4,6 +4,35 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+function onload() {
+ let imgEl = document.getElementById('img');
+ imgEl.src = "http://1.bp.blogspot.com/_3gQDLaB2ZsU/TNqPpOrfprI/AAAAAAAACLg/Wwg7s80k63U/s1600/siberian-husky-3.jpg";
+}
+// http://1.bp.blogspot.com/_3gQDLaB2ZsU/TNqPpOrfprI/AAAAAAAACLg/Wwg7s80k63U/s1600/siberian-husky-3.jpg
+// http://foodanddrink.scotsman.com/wp-content/uploads/2017/06/chihuahua-2137819_1280.jpg
+// https://i.ytimg.com/vi/yQaWpFcFijQ/hqdefault.jpg
+
+function changeImage() {
+ let imgEl = document.getElementById('img');
+ let newUrl = document.getElementById('url');
+ if (newUrl.value.trim().length==0) {
+    alert("empty url");
+    return;
+ }
+
+ if (newUrl.value.toLowerCase().startsWith("https")) {
+    alert("https is not supported yet");
+    return;
+ }
+
+ imgEl.src = newUrl.value;
+}
+
+function record(url, result) {
+ let error = document.getElementById('error');
+ error.innerHTML = result;
+}
+
 async function prediction() {
   cleanup();
 
@@ -35,10 +64,5 @@ async function cleanup() {
   table.innerHTML = "";
   table.style.display = "none"
 }
-
-module.exports = {
-  prediction,
-  cleanup
-};
 
 <!-- Author: Brian Zou -->

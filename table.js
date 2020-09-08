@@ -20,9 +20,4 @@ async function generateTable(table, data) {
   }
 }
 
-module.exports = {
-  generateTableHead,
-  generateTable,
-};
-
 <!-- Author: Brian Zou -->
